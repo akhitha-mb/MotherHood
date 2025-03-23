@@ -19,34 +19,26 @@ const Sidebar = ({ setSelected }) => {
             </button>
             <h3 style={{ display: isCollapsed ? 'none' : 'block' }}>Dashboard</h3>
             <ul>
-                <li onClick={() => setSelected('health')}>
+                {/* <li onClick={() => setSelected('health')}> */}
                     {/* <FontAwesomeIcon icon={faFileAlt} style={{ marginRight: '10px', display: isCollapsed ? 'none' : 'block' }} /> */}
-                    <Link  style={{ display: isCollapsed ? 'none' : 'block' }}>Healthmetrics</Link>
-                </li>
-                <li onClick={() => setSelected('appoinment')}>
+                    {/* <Link  style={{ display: isCollapsed ? 'none' : 'block' }}>Healthmetrics</Link> */}
+                {/* </li> */}
+                <li onClick={() => setSelected('doctorconfirmation')}>
                     {/* <FontAwesomeIcon icon={faMoneyBill} style={{ marginRight: '10px', display: isCollapsed ? 'none' : 'block' }} /> */}
-                    <Link style={{ display: isCollapsed ? 'none' : 'block' }}>Appoinment</Link>
+                    <Link style={{ display: isCollapsed ? 'none' : 'block' }}>Doctor Confirmation</Link>
                 </li>
-                <li onClick={() => setSelected('prediction')}>
+                <li onClick={() => setSelected('analytics')}>
                     {/* <FontAwesomeIcon icon={faFolder} style={{ marginRight: '10px', display: isCollapsed ? 'none' : 'block' }} /> */}
-                    <Link style={{ display: isCollapsed ? 'none' : 'block' }}>Prediction</Link>
-                </li>
-                <li onClick={() => setSelected('chat')}>
+                    <Link style={{ display: isCollapsed ? 'none' : 'block' }}>Patient Analytics</Link>
+                 </li>
+                {/* <li onClick={() => setSelected('chat')}> */}
                     {/* <FontAwesomeIcon icon={faComments} style={{ marginRight: '10px', display: isCollapsed ? 'none' : 'block' }} /> */}
-                    <Link style={{ display: isCollapsed ? 'none' : 'block' }}>Chat</Link>
-                </li>
-                <li onClick={() => setSelected('more')}>
-                    {/* <FontAwesomeIcon icon={faComments} style={{ marginRight: '10px', display: isCollapsed ? 'none' : 'block' }} /> */}
-                    <Link style={{ display: isCollapsed ? 'none' : 'block' }}>More</Link>
-                </li>
-                <li onClick={() => setSelected('cycle')}>
+                    {/* <Link style={{ display: isCollapsed ? 'none' : 'block' }}>Chat</Link> */} 
+                {/* </li> */}
+                {/*<li onClick={() => setSelected('profile')}> */}
                     {/* <FontAwesomeIcon icon={faUser } style={{ marginRight: '10px', display: isCollapsed ? 'none' : 'block' }} /> */}
-                    <Link style={{ display: isCollapsed ? 'none' : 'block' }}>Period Cycle Tracker</Link>
-                </li>
-                <li onClick={() => setSelected('diet')}>
-                    {/* <FontAwesomeIcon icon={faUser } style={{ marginRight: '10px', display: isCollapsed ? 'none' : 'block' }} /> */}
-                    <Link style={{ display: isCollapsed ? 'none' : 'block' }}>Food Recommentation</Link>
-                </li>
+                    {/* <Link style={{ display: isCollapsed ? 'none' : 'block' }}>Profile</Link> */}
+                {/* </li> */}
             </ul>
         </div>
     );

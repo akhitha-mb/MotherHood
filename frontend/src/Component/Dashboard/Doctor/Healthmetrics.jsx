@@ -32,10 +32,18 @@ const HealthMetrics = () => {
   const fetchDoctors = async () => {
     try {
       const token = localStorage.getItem("token");
-      const res = await axios.post("http://localhost:8080/api/patients/fetch-appoinment-doc", { token });
-      setDoctors(res.data.doctors);
+      const response = await axios.get("http://localhost:8080/api/patients/fetch-appoinment-doc", {
+        headers: {
+          'Authorization': `Bearer ${token}`
+        }
+      });
+      if (response.data.success === "true") {
+        setDoctors(response.data.doctors);
+      } else {
+        console.error("No doctors found:", response.data.message);
+      }
     } catch (error) {
-      console.error("Error fetching doctors:", error);
+      console.error("Error fetching doctors:", error.response?.data || error.message);
     }
   };
 

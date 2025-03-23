@@ -20,7 +20,7 @@ const Alogin = () => {
       const response = await axios.post("http://localhost:8080/api/admin/login", formData);
       localStorage.setItem("adminToken", response.data.token); // Store token
       alert("Login successful");
-      navigate("/admin/dashboard"); // Redirect to dashboard
+      navigate("/admin-dashboard"); // Redirect to dashboard
     } catch (err) {
       setError(err.response?.data?.message || "Login failed");
     }

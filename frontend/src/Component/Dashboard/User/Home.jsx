@@ -8,6 +8,8 @@ import Chat from './Chat';
 import Appointments from './Appoinments';
 import HealthMetrics from './HealthMetrics';
 import More from './More';
+import CycleTracker from './CycleTracker';
+import Dietrecommentation from './Dietrecommentation';
 
 
 const Home = () => {
@@ -31,8 +33,14 @@ const Home = () => {
             return <Prediction />;
         case 'more':
             return <More />;
+        case 'cycle':
+            return <CycleTracker />;
         case 'chat':
             return <Chat />;
+        case 'diet':
+            return <Dietrecommentation />;
+                   
+
         
     }
 })()}

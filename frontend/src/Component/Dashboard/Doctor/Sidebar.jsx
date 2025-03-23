@@ -19,10 +19,10 @@ const Sidebar = ({ setSelected }) => {
             </button>
             <h3 style={{ display: isCollapsed ? 'none' : 'block' }}>Dashboard</h3>
             <ul>
-                <li onClick={() => setSelected('health')}>
+                {/* <li onClick={() => setSelected('health')}> */}
                     {/* <FontAwesomeIcon icon={faFileAlt} style={{ marginRight: '10px', display: isCollapsed ? 'none' : 'block' }} /> */}
-                    <Link  style={{ display: isCollapsed ? 'none' : 'block' }}>Healthmetrics</Link>
-                </li>
+                    {/* <Link  style={{ display: isCollapsed ? 'none' : 'block' }}>Healthmetrics</Link> */}
+                {/* </li> */}
                 <li onClick={() => setSelected('appoinment')}>
                     {/* <FontAwesomeIcon icon={faMoneyBill} style={{ marginRight: '10px', display: isCollapsed ? 'none' : 'block' }} /> */}
                     <Link style={{ display: isCollapsed ? 'none' : 'block' }}>Appoinment</Link>

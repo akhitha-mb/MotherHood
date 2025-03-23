@@ -23,7 +23,7 @@ const Asignup = () => {
       const response = await axios.post("http://localhost:8080/api/admin/signup", formData);
       setSuccess(response.data.message);
       alert(success)
-      setTimeout(() => navigate("/admin/login"), 2000); // Redirect after signup
+      setTimeout(() => navigate("/admin-login"), 2000); // Redirect after signup
     } catch (err) {
         console.log(error)
       setError(err.response?.data?.message || "Signup failed");

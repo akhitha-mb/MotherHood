@@ -12,7 +12,7 @@ const Dlogin = () => {
     const navigate = useNavigate();
 
     const handleChange = (e) => {
-        setFormData({ ...formData, [e.target.name]: e.target.value });
+        setFormData({ ...formData, [e.target.name]: e.target.value });    
     };
 
     const handleSubmit = async (e) => {
@@ -29,10 +29,14 @@ console.log(formData)
             const data = await response.json();
 
             if (response.ok) {
-                // Store token in localStorage
-                localStorage.setItem('token', data.token);
-                alert('Login successful!');
-                navigate('/doctor-dashboard'); // Redirect to the doctor dashboard
+                console.log(data.data)
+                if(data.data.status === "Approved"){
+                    localStorage.setItem('token', data.token); // Store token
+                    alert('Login successful');
+                    navigate('/doctor-dashboard'); // Redirect to dashboard
+                } else{
+                    setError('Your account is not yet approved. Please wait for approval')
+                }
             } else {
                 setError(data.message || 'Invalid login credentials');
             }
@@ -85,3 +89,6 @@ console.log(formData)
 };
 
 export default Dlogin;
+
+
+

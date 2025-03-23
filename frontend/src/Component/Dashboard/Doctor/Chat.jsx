@@ -68,7 +68,7 @@ const ChatApp = () => {
             setDoctorId(e.target.value);
             setReceiverId(e.target.value);
           }}>
-            <option value="">Select Any Doctor</option>
+            <option value="">Select Any Patient</option>
             {doctors.map((item) => (
               <option value={item._id} key={item._id}>{item.name}</option>
             ))}

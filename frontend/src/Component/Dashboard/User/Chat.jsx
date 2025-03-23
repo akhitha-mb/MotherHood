@@ -15,6 +15,7 @@ const ChatApp = () => {
       try {
         const res = await axios.post("http://localhost:8080/api/patients/fetch-appoinment-doc", {token})
         setDoctors(res.data.doctors);
+        console.log(res.data.doctors)
       } catch (error) {
         console.error('Error fetching doctors:', error);
       }
